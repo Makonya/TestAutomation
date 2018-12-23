@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverSettings {
+    public static final String MAIN_PAGE_URL = "https://www.google.com/";
     protected WebDriver webDriver;
     protected WebDriverWait webDriverWait;
     protected WebSite webSite;
@@ -26,7 +27,7 @@ public class WebDriverSettings {
         webSite = new WebSite(webDriver, webDriverWait);
         searchPage = webSite.getSearchPage();
         resultPage = webSite.getResultPage();
-        webDriver.get("https://www.google.com/");
+        webDriver.get(MAIN_PAGE_URL);
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.id("viewport")));
 
     }

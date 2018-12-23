@@ -15,7 +15,7 @@ public class SearchTest extends WebDriverSettings {
     public void testEmptyRequest() {
         searchPage.clearSearchInputField();
         searchPage.clickEnterButton();
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://www.google.com/");
+        Assert.assertEquals(webDriver.getCurrentUrl(), MAIN_PAGE_URL);
     }
 
     /*
